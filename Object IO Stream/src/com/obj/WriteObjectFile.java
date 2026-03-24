@@ -10,7 +10,7 @@ public class WriteObjectFile {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 
 		Employee e1 = new Employee(101, "Raj Patil", 12345 , 1234);
-		Employee e2 = new Employee(101, "Tine Sharma", 67899 , 1212);
+		Employee e2 = new Employee(101, "Tina Sharma", 67899 , 1212);
 
 		String fileName = "employee.dat";
 
