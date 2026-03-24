@@ -1,0 +1,21 @@
+# Compiled Java files
+*.class
+
+# Eclipse files
+.metadata/
+.settings/
+.project
+.classpath
+
+# Logs
+*.log
+
+# OS files
+Desktop.ini
+Thumbs.db
+
+# Node (agar react bhi ho kabhi)
+node_modules/
+
+# Mac / Windows
+.DS_Store

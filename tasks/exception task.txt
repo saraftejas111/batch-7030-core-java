@@ -1,0 +1,258 @@
+Task: Mini Cab Booking System (Like Uber) 🚕
+Problem Statement
+
+Create a Java console application for a cab booking system similar to Uber/Ola.
+
+The system should allow a customer to book a ride. During the booking process, the system must validate ride details and handle different failures using exception handling.
+
+You must implement the program using OOP principles, including:
+
+classes
+
+methods
+
+OOP design
+
+static & final
+
+exceptions
+
+no inner logic implemented.
+
+This is how a company-level project skeleton usually looks.
+
+Mini Cab Booking System – Project Structure (Skeleton)
+1. Custom Exceptions
+class InvalidLocationException extends Exception {
+
+    public InvalidLocationException(String message) {
+        super(message);
+    }
+}
+
+class DriverNotAvailableException extends Exception {
+
+    public DriverNotAvailableException(String message) {
+        super(message);
+    }
+}
+
+class DistanceLimitException extends Exception {
+
+    public DistanceLimitException(String message) {
+        super(message);
+    }
+}
+
+class PaymentFailedException extends Exception {
+
+    public PaymentFailedException(String message) {
+        super(message);
+    }
+}
+2. Customer Class
+class Customer {
+
+    private String name;
+    private String pickupLocation;
+    private String dropLocation;
+    private int distance;
+
+    public Customer(String name, String pickupLocation, String dropLocation, int distance) {
+        this.name = name;
+        this.pickupLocation = pickupLocation;
+        this.dropLocation = dropLocation;
+        this.distance = distance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPickupLocation() {
+        return pickupLocation;
+    }
+
+    public String getDropLocation() {
+        return dropLocation;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+}
+3. Driver Class
+class Driver {
+
+    private final int driverId;
+    private String driverName;
+    private boolean available;
+
+    public Driver(int driverId, String driverName, boolean available) {
+        this.driverId = driverId;
+        this.driverName = driverName;
+        this.available = available;
+    }
+
+    public int getDriverId() {
+        return driverId;
+    }
+
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+}
+4. Ride Service Class
+class RideService {
+
+    static int totalRides = 0;
+    static final String COMPANY_NAME = "QuickCab";
+    final int BASE_FARE = 50;
+
+    public void bookRide(Customer customer,
+                         Driver driver,
+                         boolean paymentStatus)
+            throws InvalidLocationException,
+                   DriverNotAvailableException,
+                   DistanceLimitException,
+                   PaymentFailedException {
+
+        // validation methods call
+        validateLocation(customer);
+        checkDriver(driver);
+        checkDistance(customer);
+        processPayment(paymentStatus);
+
+        // ride creation logic
+        assignDriver(driver);
+        calculateFare(customer);
+
+        // update ride count
+        incrementRideCount();
+    }
+
+    public void validateLocation(Customer customer)
+            throws InvalidLocationException {
+
+        // logic here
+    }
+
+    public void checkDriver(Driver driver)
+            throws DriverNotAvailableException {
+
+        // logic here
+    }
+
+    public void checkDistance(Customer customer)
+            throws DistanceLimitException {
+
+        // logic here
+    }
+
+    public void processPayment(boolean paymentStatus)
+            throws PaymentFailedException {
+
+        // logic here
+    }
+
+    public void assignDriver(Driver driver) {
+
+        // logic here
+    }
+
+    public void calculateFare(Customer customer) {
+
+        // logic here
+    }
+
+    public static void incrementRideCount() {
+
+        // logic here
+    }
+}
+5. Main Application Class
+public class CabBookingApp {
+
+    public static void main(String[] args) {
+
+        Customer customer = new Customer(
+                "Tejas",
+                "Pune Station",
+                "Hinjewadi",
+                20
+        );
+
+        Driver driver = new Driver(
+                101,
+                "Rahul",
+                true
+        );
+
+        RideService rideService = new RideService();
+
+        try {
+
+            rideService.bookRide(customer, driver, true);
+
+        } catch (InvalidLocationException e) {
+
+            // handle exception
+
+        } catch (DriverNotAvailableException e) {
+
+            // handle exception
+
+        } catch (DistanceLimitException e) {
+
+            // handle exception
+
+        } catch (PaymentFailedException e) {
+
+            // handle exception
+
+        } finally {
+
+            // cleanup / closing process
+
+        }
+    }
+}
+Concepts This Structure Demonstrates
+
+This skeleton already shows interview-level understanding:
+
+OOP
+
+Encapsulation
+
+Classes & Objects
+
+Method design
+
+Exception Handling
+
+Custom exceptions
+
+throw
+
+throws
+
+try-catch-finally
+
+Keywords
+
+static
+
+final
+
+Real-world design
+
+Service layer
+
+Entity classes
+
+Validation methods

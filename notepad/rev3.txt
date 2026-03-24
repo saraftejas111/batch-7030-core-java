@@ -1,0 +1,78 @@
+Q. what is Class ? (inbuilt concept)  [ any file in java is class or interface ]
+--> It is a blueprint of an Object.
+    It is basically collection of attributes & methods.
+    It is logical entity & thatswhy it do not occupies memory.
+    Design or Plan of an Object.
+    It is also called as Custom Data type { Customized tarike se banaya gaya data type }
+
+    .java (sourcecode)   --->    .class (bytecode)
+
+Q. what is Object ? (inbuilt concept)  
+--> Object is nothing but a real time entity which occupies the memory.
+    Multiple Objects can be created by using 1 class
+
+     SBI Account : 
+
+           Class Account {  name , age , aadhar , pan , mobile }
+              
+   1. Raj :      Account { raj patil , 23 , 11223344 , 9999999999}
+
+   2. Neha :     Account { neha sharma , 22 , 22112211 , 8888888888}
+  
+
+Q. What is Data Type ? 
+--> Data type is a concept in java which is used to define that 
+    which kind of data is going to be stored in that particular variabe or method.
+
+    There 2 types : Primitives & Non-Primitives           {1 byte = 8 Bits}
+
+     #) Primitives : byte(1 byte), short(2), int(4), long(8), float(4), double(8), char(2), boolean(1-Bit)
+
+     primitives sized is defined by java , these are fixed size variables.
+
+     starting 6 datatypes are use to store numbers where as float & double allows us to store decimal points numbers
+
+     long is used to stored wide range of number but you have to use L after the number 
+
+             int i = 1231231 ; no error    |    int i = 1231231231231231231231231 ; error    int--> 4 byte fixed size
+   
+
+     #) Non-Primitives : String , Array , Class & Interface 
+
+       non-primitives sized is defined by user , these are not fixed size variables.
+    
+       String str = "hello Tejas..!"  no error (5 byte)    |     String str = "hello Teja     500 words....."  no error    (500 byte)
+        
+          str --> (5 byte)                                    str --> (500 byte)
+ 
+    --> explore the default values of data types 
+
+Q. Difference between Primitives & Non-Primitives ? --> java defined sized , user defined sized
+
+
+Q. What is Methods in Java ? Why to Use ? How to use ? real time example : 
+--> Method is a concept in java which is to execute some piece of code.
+    By using methods we can reuse the code {code reusability}.
+    It can only invoke or execute by calling it explicitly
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,15 @@
+package com.rev;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		
+		//long y = 12312312342342342343423423423L ; 
+		
+		// System.out.println(y);
+		
+		String str = "hello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbdahello23423rwdfsdafdfffgdafadfdfaskdjfdfjbda" ;
+		
+		System.out.println(str);
+	}
+}

@@ -1,0 +1,119 @@
+package com.this_study;
+
+public class Login {
+
+	String username;
+	String password;
+
+	String mobile;
+
+	public Login(String username, String password) {
+		this.username = username;
+		this.password = password;
+	}
+
+	public Login(String username, String password, String mobile) {
+		this(username, password);
+		this.mobile = mobile;
+	}
+
+	void loginDetails() {
+		System.out.println("user : " + username);
+		System.out.println("pass : " + password);
+
+	}
+
+	public static void main(String[] args) {
+		Login u1 = new Login("raj", "raj123");
+		u1.loginDetails();
+		
+		Login u2 = new Login("sam", "sam456" , "8888888888");
+		u2.loginDetails();
+	}
+
+}
+
+
+
+
+package com.this_study;
+
+public class Chaining {
+
+	public Chaining() {
+		System.out.println("No-Argument Constructor");
+	}
+
+	public Chaining(int a) {
+		this(); // no-arg constructor called
+		System.out.println("int a Constructor");
+	}
+
+	public Chaining(String a) {
+		this(1234); // int a constructor called
+		System.out.println("String a Constructor");
+	}
+
+	public Chaining(double a) {
+		this("hello"); // String a constructor called
+		System.out.println("double a Constructor");
+	}
+
+	public Chaining(char a) {
+		this(22.55); // double a constructor called
+		System.out.println("char a Constructor");
+	}
+
+	public Chaining(boolean a) {
+		this('@'); // char a constructor called
+		System.out.println("boolean a Constructor");
+	}
+
+	public static void main(String[] args) {
+		Chaining ch = new Chaining(true);
+	}
+
+}
+
+
+
+
+
+package com.this_study;
+
+public class Car {
+
+	int year;
+	String name;
+
+	public Car(int year, String name) {
+		// local ? instance ?
+		this.year = year;
+		this.name = name;
+	}
+
+	void speedLimit() {
+		System.out.println("speed limit as per IS : 150 kmpl");
+	}
+
+	void displayCarInfo() {
+//		this.speedLimit();
+		speedLimit();
+		String name = "kiran";
+		System.out.println("Name : " + this.name);
+		System.out.println("Year : " + year);
+	}
+
+	public static void main(String[] args) {
+
+		Car c1 = new Car(2026, "audi");
+//		c1.speedLimit();
+		c1.displayCarInfo();
+
+		Car c2 = new Car(2026, "tata");
+		c2.displayCarInfo();
+	}
+}
+
+
+
