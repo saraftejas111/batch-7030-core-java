@@ -15,7 +15,7 @@ public class TestApp {
 		Employee e3 = new Employee(103, "Neha Sharma", "developer", 25000);
 		Employee e4 = new Employee(104, "Jay Joshi", "tester", 44000);
 		Employee e5 = new Employee(105, "Tina Basu", "developer", 53000);
-		Employee e6 = new Employee(106, "Amit Kulkarni", "developer", 61000);
+		Employee e6 = new Employee(106, "Amit Kulkarni", "developer", 110000);
 		Employee e7 = new Employee(107, "Pooja Mehta", "tester", 39000);
 		Employee e8 = new Employee(108, "Rohan Desai", "manager", 90000);
 		Employee e9 = new Employee(109, "Sneha Kapoor", "hr", 50000);
@@ -146,7 +146,18 @@ public class TestApp {
 
 		System.out.println("\n****** Iterate using forEach lamda ******");
 
-		employees.forEach((e) -> { System.out.println(e); });
+		employees.forEach((e) -> System.out.println(e));
+		
+		System.out.println("\n****** Iterate using forEach lamda with code {} ******");
+
+		employees.forEach((e) -> { 
+			
+			if (e.getSalary() > 100000) {
+	
+				System.out.println(e);
+			}
+			
+		});
 
 		System.out.println("\n****** Iterate using forEach :: ******");
 
