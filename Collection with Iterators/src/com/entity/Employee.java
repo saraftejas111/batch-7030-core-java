@@ -1,6 +1,6 @@
 package com.entity;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
 	private int id;
 	private String name;
@@ -54,7 +54,21 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", role=" + role + ", salary=" + salary + "]";
+		return "Employee [id = " + id + ", name = " + name + ", role = " + role + ", salary = " + salary + "]";
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+
+		 return this.id-o.id; // 104 - 101 = 3
+
+		// return this.name.compareTo(o.name); // name
+
+		// return (int) (this.salary - o.salary);
+
 	}
 
 }
+
+// comparableis used with class or entity
+// used to add default sorting nature of entity
