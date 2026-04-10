@@ -1,0 +1,49 @@
+* Good Evening All..
+
+-> i will mark your attendance at anytime 
+----------------------------------------------------
+
+** Last Session **
+
+   CRUD Operations :  1) by query   2) from UI
+----------------------------------------------------
+
+*** Today's Agenda ***
+
+   1)  ALTER QUERIES : used to update the existing db and table structure 
+     
+        ex : update table , add or remove or change or rename columns 
+ 
+
+   2)  DDL : Data Definition Language 
+ 
+        - queries which acts on whole structure instead of some particular data are lies under DDL
+
+-- DDL QUERIES : 
+
+-- ALTER QUERIES 
+ALTER TABLE employees ADD COLUMN address VARCHAR(50) ; 
+ALTER TABLE employees DROP COLUMN address ; 
+ALTER TABLE employees MODIFY COLUMN address double;
+ALTER TABLE employees CHANGE address increament int;
+RENAME TABLE employees TO employees_data; 
+RENAME TABLE employees_data TO employees; 
+
+CREATE TABLE staff (id int primary key , name varchar(45) ) ;
+DROP TABLE staff;
+TRUNCATE TABLE employees;
+
+
+      
+       DML : Data Manipulation Language
+        - queries which acts on rows or  particular data instead of whole structure of data are lies under DML 
+-- DML QUERIES : INSERT , UPDATE , DELETE
+
+    
+   DQL : Data Query Language      
+        - queries which are used in retrival operations are lies under DQL 
+-- DQL QUERIES : SELECT 
+
+
+
+
