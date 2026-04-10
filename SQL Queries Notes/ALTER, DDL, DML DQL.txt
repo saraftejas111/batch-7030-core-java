@@ -45,5 +45,11 @@ TRUNCATE TABLE employees;
 -- DQL QUERIES : SELECT 
 
 
-
+SELECT name , role FROM employees ;
+SELECT name FROM employees WHERE name LIKE '%patel';
+SELECT name FROM employees WHERE name LIKE 'r%';
+SELECT name FROM employees WHERE name LIKE '%p%';
+SELECT name , salary FROM employees WHERE salary > 100000;
+SELECT name , role , salary FROM employees WHERE role = 'developer';
+SELECT name , role , salary FROM employees WHERE role LIKE 'dev%';
 
