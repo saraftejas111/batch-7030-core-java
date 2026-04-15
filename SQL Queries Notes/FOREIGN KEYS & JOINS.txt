@@ -1,0 +1,53 @@
+SHOW DATABASES;
+USE batch7037;
+SHOW TABLES;
+SELECT * FROM address;
+SELECT * FROM person;
+-- One-to-Many Mapping or Many-to-One Mapping
+SELECT name , age FROM person; 
+
+SELECT person.id , person.name , person.age , person.pincode AS person_pincode ,
+address.pincode AS address_pincode , address.area , address.city , address.state
+FROM person JOIN address ON person.pincode = address.pincode ;
+
+ SELECT * FROM 	votingcard;
+ -- One-to-One mapping using unique constraint
+ 
+SELECT person.id , person.name , person.age , person.pincode AS person_pincode , person.epicId , 
+votingcard.epic , votingcard.constituency
+FROM person JOIN votingcard ON person.epicId = votingcard.epic;
+
+-- Foreign key returns only the matching columns data
+
+-- JOINS
+SELECT * FROM subject;
+SELECT * FROM faculty;
+
+-- INNER JOIN : returns only the matching columns data
+
+SELECT subject.subId , subject.subjectName , subject.duratioMonths , 
+faculty.id ,  faculty.name , faculty.subCode FROM subject 
+INNER JOIN faculty ON subject.subId =  faculty.subCode ; 
+
+-- LEFT JOIN : returns all the data of left side table only & declares right side table columns null if  not mathced
+
+SELECT subject.subId , subject.subjectName , subject.duratioMonths , 
+faculty.id ,  faculty.name , faculty.subCode FROM subject 
+LEFT JOIN faculty ON subject.subId =  faculty.subCode ; 
+
+-- RIGHT JOIN : returns all the data of RIGHT side table only & declares LEFT side table columns null if not mathced
+
+SELECT subject.subId , subject.subjectName , subject.duratioMonths , 
+faculty.id ,  faculty.name , faculty.subCode FROM subject 
+RIGHT JOIN faculty ON subject.subId =  faculty.subCode ; 
+
+-- OUTER JOIN : returns all the data of left & right side table columns.. null if not mathced
+
+SELECT subject.subId , subject.subjectName , subject.duratioMonths , 
+faculty.id ,  faculty.name , faculty.subCode FROM subject 
+LEFT JOIN faculty ON subject.subId =  faculty.subCode 
+UNION
+SELECT subject.subId , subject.subjectName , subject.duratioMonths , 
+faculty.id ,  faculty.name , faculty.subCode FROM subject 
+RIGHT JOIN faculty ON subject.subId =  faculty.subCode ;
+
