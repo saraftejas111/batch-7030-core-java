@@ -1,0 +1,137 @@
+SHOW DATABASES;
+USE batch7037;
+SHOW TABLES;
+SELECT * FROM employees ;
+
+SELECT name , salary FROM employees; -- SELECT & FROM CLAUSE
+
+SELECT name , salary FROM employees WHERE salary > 100000; -- WHERE CLAUSE USE TO FILTER THE ROWS
+
+SELECT * FROM employees ORDER BY salary ASC;
+
+SELECT COUNT(*) as Count_of_employees , role ,
+SUM(salary) , AVG(salary) FROM employees GROUP BY role ; 
+
+SELECT COUNT(*) as rich_employees , role , SUM(salary) FROM employees 
+ GROUP BY role HAVING SUM(salary) > 170000 ;
+
+
+-- **** AGGREGATING FUNCTIONS **** 
+
+SELECT COUNT(*) as total_employees FROM employees;
+
+SELECT SUM(salary) as total_salary FROM employees; -- salary / num_of_emp
+
+SELECT AVG(salary) as avg_salary FROM employees;
+
+SELECT MAX(salary) as max_salary FROM employees;  -- 123456
+
+SELECT MIN(salary) as max_salary FROM employees;  -- 80000
+
+
+-- SUBQUERIES : queries build by adding 2 or more logical queries
+
+-- Q. FIND MAX SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SELECT MAX(salary) as max_salary FROM employees) ; 
+
+-- Q. FIND MIN SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SELECT MIN(salary) as max_salary FROM employees) ; 
+
+SHOW DATABASES;
+USE batch7037;
+SHOW TABLES;
+SELECT * FROM employees ;
+
+SELECT name , salary FROM employees; -- SELECT & FROM CLAUSE
+
+SELECT name , salary FROM employees WHERE salary > 100000; -- WHERE CLAUSE USE TO FILTER THE ROWS
+
+SELECT * FROM employees ORDER BY salary ASC;
+
+SELECT COUNT(*) as Count_of_employees , role ,
+SUM(salary) , AVG(salary) FROM employees GROUP BY role ; 
+
+SELECT COUNT(*) as rich_employees , role , SUM(salary) FROM employees 
+ GROUP BY role HAVING SUM(salary) > 170000 ;
+
+
+-- **** AGGREGATING FUNCTIONS **** 
+
+SELECT COUNT(*) as total_employees FROM employees;
+
+SELECT SUM(salary) as total_salary FROM employees; -- salary / num_of_emp
+
+SELECT AVG(salary) as avg_salary FROM employees;
+
+SELECT MAX(salary) as max_salary FROM employees;  -- 123456
+
+SELECT MIN(salary) as max_salary FROM employees;  -- 80000
+
+
+-- SUBQUERIES : queries build by adding 2 or logical queries
+
+-- Q. FIND MAX SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SELECT MAX(salary) as max_salary FROM employees) ; 
+
+-- Q. FIND 2ND MAX SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SHOW DATABASES;
+USE batch7037;
+SHOW TABLES;
+SELECT * FROM employees ;
+
+SELECT name , salary FROM employees; -- SELECT & FROM CLAUSE
+
+SELECT name , salary FROM employees WHERE salary > 100000; -- WHERE CLAUSE USE TO FILTER THE ROWS
+
+SELECT * FROM employees ORDER BY salary ASC;
+
+SELECT COUNT(*) as Count_of_employees , role ,
+SUM(salary) , AVG(salary) FROM employees GROUP BY role ; 
+
+SELECT COUNT(*) as rich_employees , role , SUM(salary) FROM employees 
+ GROUP BY role HAVING SUM(salary) > 170000 ;
+
+
+-- **** AGGREGATING FUNCTIONS **** 
+
+SELECT COUNT(*) as total_employees FROM employees;
+
+SELECT SUM(salary) as total_salary FROM employees; -- salary / num_of_emp
+
+SELECT AVG(salary) as avg_salary FROM employees;
+
+SELECT MAX(salary) as max_salary FROM employees;  -- 123456
+
+SELECT MIN(salary) as max_salary FROM employees;  -- 80000
+
+
+-- SUBQUERIES : queries build by adding 2 or logical queries
+
+-- Q. FIND MAX SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SELECT MAX(salary) as max_salary FROM employees) ; 
+
+-- Q. FIND MIN SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SELECT MAX(salary) as max_salary FROM employees WHERE salary < 
+(SELECT MAX(salary) as max_salary FROM employees)); 
+-- YE MERA BADA BETA HAIN PAR SABSE BADA NAHI = 2ND HIGEST
+
+
+-- Q. FIND 2nd MIN SALARIED EMPLOYEE NAME AND SALARY 
+
+SELECT name , salary FROM employees WHERE salary = 
+(SELECT MIN(salary) as max_salary FROM employees WHERE salary > 
+(SELECT MIN(salary) as max_salary FROM employees)); 
+-- YE MERA CHOTA BETA HAIN PAR SABSE CHOTA NAHI = 2ND LAST
+
